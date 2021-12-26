@@ -1,7 +1,9 @@
 from pydantic import BaseSettings,Field
 from pathlib import WindowsPath
 from functools import lru_cache
-import pathlib
+import pathlib,os
+
+os.environ['CQLENG_ALLOW_SCHEMA_MANAGEMENT']="1"
 
 BASE_DIR = ASTRADB_CONNECT_BUNDLE = pathlib.Path(__file__).parent
 
